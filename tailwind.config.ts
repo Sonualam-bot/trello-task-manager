@@ -13,6 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        barlow: ["Barlow", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+      keyframes: {
+        dissolve: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        dissolve: "dissolve 300ms linear",
+      },
     },
   },
   plugins: [],
