@@ -2,8 +2,9 @@
 
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import Link from "next/link";
 
-function SignOut() {
+function SignUp() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   type loginProps = {
@@ -29,7 +30,7 @@ function SignOut() {
 
   return (
     <main
-      className=" w-full h-screen pt-[50px] px-[396px]  "
+      className=" w-full h-screen flex items-center justify-center  "
       style={{
         background: "linear-gradient(180deg, #FFFFFF 0%, #AFA3FF 100%)",
       }}
@@ -102,13 +103,16 @@ function SignOut() {
 
         <p className="text-center">
           Already have an account? Create{" "}
-          <span className=" font-inter text-[#0054A1] font-normal text-[20px] leading-[24.2px] text-center animate-dissolve ">
+          <Link
+            href="/sign-in"
+            className=" font-inter text-[#0054A1] font-normal text-[20px] leading-[24.2px] text-center animate-dissolve  cursor-pointer "
+          >
             Log in.
-          </span>
+          </Link>
         </p>
       </form>
     </main>
   );
 }
 
-export default SignOut;
+export default SignUp;
