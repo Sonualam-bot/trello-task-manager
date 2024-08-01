@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import DrawerFromRight from "./Drawer";
 
 //assets
 import download from "../../public/dashboard/download.svg";
@@ -7,7 +10,6 @@ import user from "../../public/dashboard/user.png";
 import notification from "../../public/dashboard/notification.png";
 import theme from "../../public/dashboard/theme.png";
 import arrow from "../../public/dashboard/arrow.png";
-import plus from "../../public/dashboard/plus.png";
 import home from "../../public/dashboard/home.png";
 import boards from "../../public/dashboard/boards.png";
 import setting from "../../public/dashboard/setting.png";
@@ -72,21 +74,8 @@ function Sidebar() {
             <Li icon={analytics.src} text="Analytics" />
           </div>
           {/* new task button  */}
-          <button
-            className=" rounded-lg border p-2 font-inter font-medium text-[20px] leading-[24.2px] text-[#FFFFFF] py-[14px] flex items-center justify-center gap-2  "
-            style={{
-              background: "linear-gradient(180deg, #4C38C2 0%, #2F2188 100%)",
-              boxShadow: "0px 1px 8px 0px #00000040",
-            }}
-          >
-            Create new task
-            <Image
-              src={plus.src}
-              height={plus.height}
-              width={plus.width}
-              alt="/plus"
-            />
-          </button>
+
+          <DrawerFromRight />
         </div>
       </section>
 
